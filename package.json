@@ -1,0 +1,46 @@
+{
+  "name": "github-search",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "antd": "^4.1.5",
+    "autoprefixer": "^9.7.6",
+    "axios": "^0.19.2",
+    "babel-plugin-import": "^1.13.0",
+    "customize-cra": "^0.9.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "react": "^16.13.1",
+    "react-app-rewired": "^2.1.5",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "tailwindcss": "^1.3.5"
+  },
+  "scripts": {
+    "build:tailwind": "postcss src/assets/styles/tailwind.css -o src/assets/styles/tailwind.css",
+    "watch:tailwind": "postcss -w src/assets/styles/tailwind.css -o src/assets/styles/tailwind.css",
+    "start": "run-p watch:tailwind start:react",
+    "start:react": "react-app-rewired start",
+    "prebuild": "npm run build:tailwind",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
